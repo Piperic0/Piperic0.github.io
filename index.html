@@ -3,92 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PipeTec - Servicios Técnicos en Tocancipá</title>
+  <title>PipeTec - Soporte Técnico y Web en Tocancipá</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-      color: #222;
+    :root {
+      --azul: #0057b7;
+      --negro: #111;
+      --blanco: #fff;
+      --gris-claro: #f4f4f4;
     }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--gris-claro);
+      color: var(--negro);
+    }
+
     header {
-      background-color: #0a0a23;
-      color: white;
-      padding: 20px 10px;
+      background-color: var(--azul);
+      color: var(--blanco);
+      padding: 40px 20px;
       text-align: center;
     }
-    .container {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
     }
-    h1 {
-      color: #0057b7;
-    }
-    .servicios {
-      margin: 20px 0;
-    }
-    .servicios li {
-      margin-bottom: 10px;
-    }
-    .contacto {
-      background-color: #0057b7;
-      color: white;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 30px;
-    }
-    .contacto p {
+
+    header p {
+      margin-top: 10px;
       font-size: 18px;
     }
+
+    .section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      color: var(--azul);
+      border-bottom: 2px solid var(--azul);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      background-color: var(--blanco);
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      border-left: 5px solid var(--azul);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      font-size: 16px;
+    }
+
+    .contact {
+      background-color: var(--azul);
+      color: var(--blanco);
+      padding: 30px 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 15px;
+      transition: background 0.3s ease;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe5d;
+    }
+
     footer {
       text-align: center;
-      padding: 10px;
-      background: #0a0a23;
+      padding: 20px;
+      background: #000;
       color: white;
-      margin-top: 30px;
+      margin-top: 40px;
     }
-    a {
-      color: #fff;
-      font-weight: bold;
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      .whatsapp-button {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>PipeTec</h1>
-  <p>Servicio Técnico y Digital – Tocancipá y alrededores</p>
-</header>
+  <header>
+    <h1>PipeTec</h1>
+    <p>Soporte Técnico y Desarrollo Web – Tocancipá y alrededores</p>
+  </header>
 
-<div class="container">
-  <h2>¿Quién soy?</h2>
-  <p>Soy estudiante de Ingeniería de Sistemas y ofrezco servicios tecnológicos confiables y económicos.</p>
+  <section class="section about">
+    <h2>¿Quién soy?</h2>
+    <p>Soy estudiante de Ingeniería de Sistemas con pasión por la tecnología. Ofrezco soluciones confiables, profesionales y accesibles para particulares y pequeños negocios.</p>
+  </section>
 
-  <h2>Servicios que ofrezco</h2>
-  <ul class="servicios">
-    <li>🔧 Formateo de computadores + instalación de Windows y Office</li>
-    <li>💻 Mantenimiento de PC lentos, eliminación de virus</li>
-    <li>🌐 Creación de páginas web básicas para negocios</li>
-    <li>📲 Instalación de programas y soporte técnico</li>
-  </ul>
+  <section class="section services">
+    <h2>Servicios</h2>
+    <ul>
+      <li>🔧 Formateo completo de computadores con instalación de Windows y Office.</li>
+      <li>💻 Mantenimiento y optimización de PC lentos, limpieza de virus.</li>
+      <li>🌐 Creación de páginas web básicas para negocios locales.</li>
+      <li>📲 Instalación de software específico y soporte remoto.</li>
+    </ul>
+  </section>
 
-  <div class="contacto">
-    <h2>Contacto</h2>
-    <p>📍 Estoy en Tocancipá</p>
-    <p>💰 Precios justos</p>
-    <p>📲 A domicilio o remoto</p>
-    <p>💬 Escríbeme sin compromiso: <a href="https://wa.me/573143911106" target="_blank">314 391 1106 (WhatsApp)</a></p>
-    <p>💡 Frase: <strong>“Apoya lo local”</strong></p>
-  </div>
-</div>
+  <section class="section contact">
+    <h2>Contáctame</h2>
+    <p>📍 Zona: Tocancipá</p>
+    <p>🚗 Modalidad: A domicilio o remoto</p>
+    <p>💰 Precios justos, atención garantizada</p>
+    <p>📞 Escríbeme por WhatsApp:</p>
+    <a class="whatsapp-button" href="https://wa.me/573143911106" target="_blank">📲 314 391 1106</a>
+    <p style="margin-top: 20px;">✨ <em>“Apoya lo local”</em></p>
+  </section>
 
-<footer>
-  © 2025 PipeTec – Todos los derechos reservados
-</footer>
+  <footer>
+    © 2025 PipeTec – Soluciones Digitales y Técnicas
+  </footer>
 
 </body>
 </html>
